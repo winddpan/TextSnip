@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  TextSnip
+
+  Created by PAN on 2022/12/1.
+  
+*/
+"Start captrue" = "开始截取文字";
+"Perference" = "设置";
+"Quit" = "退出";
+
