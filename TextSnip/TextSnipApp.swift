@@ -68,7 +68,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         snapshotManager.startCapture()
     }
 
-    @objc private func openPerference() {}
+    @objc private func openPerference() {
+        let title = NSLocalizedString("Perference", comment: "")
+        if !NSApplication.shared.windows.contains(where: { $0.title == title }) {
+            SettingView().openNewWindow(title: "TextSnip \(title)", geometry: .zero, style: [.titled, .closable])
+        }
+    }
 
     @objc private func quit() {
         NSApplication.shared.terminate(nil)

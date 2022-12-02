@@ -1,11 +1,6 @@
-/* 
-  Localizable.strings
-  TextSnip
-
-  Created by PAN on 2022/12/1.
-  
-*/
-"Start captrue" = "开始截取文字";
+"Start captrue" = "开始截取";
 "Perference" = "设置";
 "Quit" = "退出";
-
+"Shortcut" = "快捷键";
+"Reset" = "恢复默认";
+"Launch at Login" = "开机自动启动";

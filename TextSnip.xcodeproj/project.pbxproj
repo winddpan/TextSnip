@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4047D607293887C100EC3C7D /* LiveTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4047D606293887C100EC3C7D /* LiveTextView.swift */; };
+		405E9EE32939ED6E0088609C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E9EE22939ED6E0088609C /* SettingView.swift */; };
+		405E9EE52939EEAD0088609C /* SwiftUI+OpenNewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E9EE42939EEAD0088609C /* SwiftUI+OpenNewWindow.swift */; };
+		405E9EED2939FD610088609C /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 405E9EEC2939FD610088609C /* LaunchAtLogin */; };
 		40C508EC2938A597004E4397 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40C508EE2938A597004E4397 /* Localizable.strings */; };
 		40E24D3D2935E3A500A3599D /* TextSnipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E24D3C2935E3A500A3599D /* TextSnipApp.swift */; };
 		40E24D412935E3A600A3599D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E24D402935E3A600A3599D /* Assets.xcassets */; };
@@ -29,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		4047D606293887C100EC3C7D /* LiveTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTextView.swift; sourceTree = "<group>"; };
+		405E9EE22939ED6E0088609C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		405E9EE42939EEAD0088609C /* SwiftUI+OpenNewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+OpenNewWindow.swift"; sourceTree = "<group>"; };
 		40C508ED2938A597004E4397 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		40E24D392935E3A500A3599D /* TextSnip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSnip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E24D3C2935E3A500A3599D /* TextSnipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSnipApp.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405E9EED2939FD610088609C /* LaunchAtLogin in Frameworks */,
 				40E24D4F2935E3FB00A3599D /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,12 +68,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		405E9EEB2939FD610088609C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		40E24D302935E3A400A3599D = {
 			isa = PBXGroup;
 			children = (
 				40C508EE2938A597004E4397 /* Localizable.strings */,
 				40E24D3B2935E3A500A3599D /* TextSnip */,
 				40E24D3A2935E3A500A3599D /* Products */,
+				405E9EEB2939FD610088609C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +108,7 @@
 				40E24D422935E3A600A3599D /* Preview Content */,
 				40E5F60B2938818C00178EF7 /* SnipViewModel.swift */,
 				4047D606293887C100EC3C7D /* LiveTextView.swift */,
+				405E9EE22939ED6E0088609C /* SettingView.swift */,
 			);
 			path = TextSnip;
 			sourceTree = "<group>";
@@ -116,6 +131,7 @@
 				40E24D622935F88900A3599D /* StoreInExtension.swift */,
 				40E24D562935E82800A3599D /* PassthroughSubjectErased.swift */,
 				40E24D502935E64100A3599D /* NSScreen+Extension.swift */,
+				405E9EE42939EEAD0088609C /* SwiftUI+OpenNewWindow.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -130,6 +146,7 @@
 				40E24D352935E3A500A3599D /* Sources */,
 				40E24D362935E3A500A3599D /* Frameworks */,
 				40E24D372935E3A500A3599D /* Resources */,
+				405E9EEA2939FCF10088609C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,6 +155,7 @@
 			name = TextSnip;
 			packageProductDependencies = (
 				40E24D4E2935E3FB00A3599D /* KeyboardShortcuts */,
+				405E9EEC2939FD610088609C /* LaunchAtLogin */,
 			);
 			productName = TextSnip;
 			productReference = 40E24D392935E3A500A3599D /* TextSnip.app */;
@@ -170,6 +188,7 @@
 			mainGroup = 40E24D302935E3A400A3599D;
 			packageReferences = (
 				40E24D4D2935E3FB00A3599D /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				405E9EE92939FC8B0088609C /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
 			productRefGroup = 40E24D3A2935E3A500A3599D /* Products */;
 			projectDirPath = "";
@@ -193,17 +212,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		405E9EEA2939FCF10088609C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40E24D352935E3A500A3599D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405E9EE52939EEAD0088609C /* SwiftUI+OpenNewWindow.swift in Sources */,
 				40E24D6D2935F8F700A3599D /* NSCursor.swift in Sources */,
 				40E24D532935E67800A3599D /* Hotkey.swift in Sources */,
 				40E24D672935F8BE00A3599D /* Adjust.swift in Sources */,
 				40E24D692935F8CF00A3599D /* OnLoad.swift in Sources */,
 				40E24D552935E81E00A3599D /* SSWindow.swift in Sources */,
 				40E24D632935F88900A3599D /* StoreInExtension.swift in Sources */,
+				405E9EE32939ED6E0088609C /* SettingView.swift in Sources */,
 				40E24D6B2935F8E300A3599D /* CGPoint+Extension.swift in Sources */,
 				40E5F60729387A9500178EF7 /* SnipView.swift in Sources */,
 				40E24D512935E64100A3599D /* NSScreen+Extension.swift in Sources */,
@@ -418,6 +460,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		405E9EE92939FC8B0088609C /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		40E24D4D2935E3FB00A3599D /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts.git";
@@ -429,6 +479,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		405E9EEC2939FD610088609C /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 405E9EE92939FC8B0088609C /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
 		40E24D4E2935E3FB00A3599D /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 40E24D4D2935E3FB00A3599D /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
