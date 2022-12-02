@@ -36,7 +36,7 @@ struct SnipView: View {
                         context.withCGContext { cgContext in
                             cgContext.setStrokeColor(CGColor(red: 236.0 / 255, green: 240.0 / 255, blue: 241.0 / 255, alpha: 1))
                             cgContext.setLineWidth(1)
-                            cgContext.setFillColor(.white.copy(alpha: 0.1)!)
+                            cgContext.setFillColor(.black.copy(alpha: 0.22)!)
 
                             let path = CGPath(rect: rect, transform: nil)
                             cgContext.addPath(path)

@@ -11,7 +11,7 @@ struct LiveTextView: NSViewRepresentable {
 
     func makeNSView(context: Context) -> some NSView {
         imageView.image = image
-        overlayView.preferredInteractionTypes = .automatic
+        overlayView.preferredInteractionTypes = [.textSelection]
         overlayView.autoresizingMask = [.width, .height]
         overlayView.frame = imageView.bounds
         overlayView.trackingImageView = imageView
